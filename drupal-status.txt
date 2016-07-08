@@ -1,0 +1,42 @@
+Drupal	7.44
+OK
+Access to update.php	Protected
+OK
+Configuration file	Protected
+OK
+Cron maintenance tasks	Last run 18 min 46 sec ago
+You can run cron manually.
+To run cron from outside the site, go to http://localhost/cron.php?cron_key=JWXNtpVmkv8cOz5WfT7NIPiftIJNpIX1_VAPJDsrLnU
+OK
+Database system	MySQL, MariaDB, or equivalent
+OK
+Database system version	5.6.26
+OK
+Database updates	Up to date
+OK
+File system	Writable (public download method)
+OK
+GD library PNG support	bundled (2.1.0 compatible)
+OK
+GD library rotate and desaturate effects	bundled (2.1.0 compatible)
+OK
+Node Access Permissions	Disabled
+If the site is experiencing problems with permissions to content, you may have to rebuild the permissions cache. Rebuilding will remove all privileges to content and replace them with permissions based on the current modules and settings. Rebuilding may take some time if there is a lot of content or complex permission settings. After rebuilding has completed, content will automatically use the new permissions. Rebuild permissions
+OK
+PHP	5.5.29 (more information)
+OK
+PHP extensions	Enabled
+OK
+PHP memory limit	128M
+OK
+PHP register globals	Disabled
+OK
+Unicode library	PHP Mbstring Extension
+Warning
+Update notifications	Not enabled
+Update notifications are not enabled. It is highly recommended that you enable the update manager module from the module administration page in order to stay up-to-date on new releases. For more information, Update status handbook page.
+Info
+Upload progress	Not enabled
+Your server is capable of displaying file upload progress, but does not have the required libraries. It is recommended to install the PECL uploadprogress library (preferred) or to install APC.
+OK
+Web server	Apache

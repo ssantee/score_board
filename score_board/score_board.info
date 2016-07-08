@@ -1,0 +1,3 @@
+Name = Score Board
+description = A module that displays the results of game matchups.
+core = 7.x

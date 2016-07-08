@@ -1,0 +1,59 @@
+<!--
+/*
+Each game section should contain:
+•	the game status (the state)
+•	both team names, home and away
+•	team ranks and records
+•	the team's scores (if any)
+Games should be presented sorted by the game status - live, pre, final - and then by time.
+
+ */
+ -->
+<div class="cardlist" ng-show="!$ctrl.err">
+    <p>Listing <span ng-show="$ctrl.searchTerm">{{($ctrl.cards | filter: $ctrl.searchTerm).length}} of</span> {{$ctrl.resultsCount}} games</p>
+    <p><label>Search Games:</label> <input ng-model="$ctrl.searchTerm" /></p>
+    <ul class="cards" ng-repeat="card in $ctrl.cards | orderBy:$ctrl.orderProp | filter: $ctrl.searchTerm">
+        <li>
+            <div class="card">
+                <h2>Status: {{card.state | upper}}</h2>
+                <p class="gametime">{{card.startTimeDisplay}}</p>
+
+                <div class="card-part">
+                    <h3>Home Team</h3>
+                    <ul>
+                        <li>Team: {{card.home.name}}</li>
+                        <li>Rank: {{card.home.rank}}</li>
+                        <li>
+                            Record: {{card.home.record}}
+                        </li>
+                        <li ng-show="{{card.home.score}}">
+                            Score: {{card.home.score}}
+                            <span class="win" ng-show="{{card.home.winner}}">
+                                {{card.home.winner == 'true' ? $ctrl.winStr : $ctrl.loseStr }}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-part">
+                    <h3>Away Team</h3>
+                    <ul>
+                        <li>Team: {{card.away.name}}</li>
+                        <li>Rank: {{card.away.rank}}</li>
+                        <li>
+                            Record: {{card.away.record}}
+                        </li>
+                        <li ng-show="{{card.away.score}}">
+                            Score: {{card.away.score}}
+                            <span class="win" ng-show="{{card.away.winner}}">
+                                {{card.away.winner == 'true' ? $ctrl.winStr : $ctrl.loseStr }}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="scoreboard-error" ng-show="$ctrl.err">
+    {{$ctrl.err}}
+</div>

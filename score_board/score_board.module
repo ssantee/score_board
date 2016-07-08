@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * A module that displays the results of game matchups.
+ */
+
+function score_board_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#score_board":
+      return '' . t("A module that displays the results of game matchups. Look for the Scoreboard menu item in your main-menu (You may have to clear the cache).") . '';
+
+    break;
+
+  }
+}
+
+function score_board_menu() {
+  $items['scoreboard'] = array(
+    'title' => 'Scoreboard',
+    'page callback' => 'score_board_view',
+    'access callback' => 'score_board_access',
+    'menu_name' => 'main-menu',
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function score_board_view() {
+
+  drupal_add_css(drupal_get_path('module', 'score_board') . '/app/stylesheets/screen.css', array('group'=>'CSS_THEME', 'weight'=>'100'), 'module', 'all', TRUE);
+
+  drupal_add_js('https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js');
+
+  drupal_add_js(drupal_get_path('module', 'score_board') . '/app/main.js');
+
+  drupal_add_js(drupal_get_path('module', 'score_board') . '/app/scorecard/scorecard.component.js');
+
+  require 'app/views.php';
+
+  return view_main();
+}
+
+function score_board_access() {
+  return TRUE;
+}

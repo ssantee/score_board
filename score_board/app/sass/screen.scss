@@ -1,0 +1,89 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/utilities/general/clearfix";
+
+$mediumscreen: 768px;
+
+.scoreboard-error{
+  color: red;
+}
+
+#scoreboard-main{
+  width: 100%;
+  border: 1px solid #000;
+  font: 14px sans-serif;
+
+  ul{
+    padding: 0;
+  }
+}
+
+.cardlist{
+  padding: 5px 12px;
+}
+
+.card{
+  @include clearfix();
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 0;
+
+  h2{
+    padding: 3px 6px;
+    background-color: #666;
+    color: #fff;
+  }
+
+  li{
+    list-style-type: none;
+    padding: 6px;
+  }
+
+  li:nth-child(2n+1){
+    background-color: #eee;
+  }
+}
+
+.card-part{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 8px;
+
+  @media(min-width: $mediumscreen){
+    width: 50%;
+    float:left;
+    $border: 1px solid #eee;
+    border-top: $border;
+    border-bottom: $border;
+
+    &:nth-child(0n+3){
+      border-left: $border;
+    }
+    &:nth-child(0n+4){
+      border-right: $border;
+    }
+  }
+
+  h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.win{
+  display: inline-block;
+  padding: 0 8px;
+  color: darkgoldenrod;
+  text-shadow: 2px 2px #eee;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.gametime{
+  font-weight: bold;
+  text-indent: 10px;
+}

@@ -1,0 +1,94 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 10, ../sass/screen.scss */
+.scoreboard-error {
+  color: red;
+}
+
+/* line 14, ../sass/screen.scss */
+#scoreboard-main {
+  width: 100%;
+  border: 1px solid #000;
+  font: 14px sans-serif;
+}
+/* line 19, ../sass/screen.scss */
+#scoreboard-main ul {
+  padding: 0;
+}
+
+/* line 24, ../sass/screen.scss */
+.cardlist {
+  padding: 5px 12px;
+}
+
+/* line 28, ../sass/screen.scss */
+.card {
+  overflow: hidden;
+  *zoom: 1;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 0;
+}
+/* line 34, ../sass/screen.scss */
+.card h2 {
+  padding: 3px 6px;
+  background-color: #666;
+  color: #fff;
+}
+/* line 40, ../sass/screen.scss */
+.card li {
+  list-style-type: none;
+  padding: 6px;
+}
+/* line 45, ../sass/screen.scss */
+.card li:nth-child(2n+1) {
+  background-color: #eee;
+}
+
+/* line 50, ../sass/screen.scss */
+.card-part {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 8px;
+}
+@media (min-width: 768px) {
+  /* line 50, ../sass/screen.scss */
+  .card-part {
+    width: 50%;
+    float: left;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  /* line 62, ../sass/screen.scss */
+  .card-part:nth-child(0n+3) {
+    border-left: 1px solid #eee;
+  }
+  /* line 65, ../sass/screen.scss */
+  .card-part:nth-child(0n+4) {
+    border-right: 1px solid #eee;
+  }
+}
+/* line 70, ../sass/screen.scss */
+.card-part h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 77, ../sass/screen.scss */
+.win {
+  display: inline-block;
+  padding: 0 8px;
+  color: darkgoldenrod;
+  text-shadow: 2px 2px #eee;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 86, ../sass/screen.scss */
+.gametime {
+  font-weight: bold;
+  text-indent: 10px;
+}
